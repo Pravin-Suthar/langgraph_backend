@@ -1,0 +1,16 @@
+[project]
+name = "country-info-agent"
+version = "1.0.0"
+description = "Country Information AI Agent using LangGraph"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.128.0",
+    "uvicorn>=0.40.0",
+    "pydantic>=2.11.3",
+    "python-dotenv>=1.1.0",
+    "python-json-logger>=4.0.0",
+    "langchain-groq>=0.3.0",
+    "langgraph>=0.3.34",
+    "httpx>=0.28.0",
+]
