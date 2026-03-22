@@ -16,7 +16,10 @@ logger.setLevel(logging.INFO)
 if environment == "production":
     handler = logging.StreamHandler()
 else:
-    handler = logging.FileHandler(filename="logs.log")
+    try:
+        handler = logging.FileHandler(filename="logs.log")
+    except OSError:
+        handler = logging.StreamHandler()
 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
